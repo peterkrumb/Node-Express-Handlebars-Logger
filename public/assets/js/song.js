@@ -7,8 +7,8 @@ $(function() {
             listened: true
         };
 
-        // Update the burger state to "devoured"
-        $.ajax("/api/song/" + id, {
+        // Update the song state to "listened"
+        $.ajax("/api/songs/" + id, {
             type: "PUT",
             data: newListenedState
         }).then(
@@ -24,7 +24,8 @@ $(function() {
         event.preventDefault();
 
         var newSong = {
-            name: $("#ca").val().trim()
+            choice: $("#ipod").val().trim(),
+            listened: false
         };
 
         // Send the POST request.

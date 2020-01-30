@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
-const path = require('path');
+
 const mysql = require('mysql');
 
 app.use(express.static("public"));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -16,6 +17,6 @@ var routes = require("./controllers/songs-controller.js");
 
 app.use(routes);
 
-app.listen(process.env.PORT || 8080, function() {
+app.listen(process.env.PORT || 8081, function() {
     console.log('Your node js server is running');
 });

@@ -9,3 +9,49 @@ body {
     width: 150px;
     height: 150px;
 }
+
+.container {
+    margin-top: 3rem;
+}
+
+body {
+    text-align: center !important;
+    background-color: #f5c93b !important;
+}
+
+p {
+    color: black;
+}
+
+h1 {
+    color: red;
+}
+
+p,
+h1 {
+    font: helvetica, sans-serif;
+}
+
+.input {
+    position: justified;
+}
+
+ol {
+    padding: 1rem 1rem 1rem 1rem !important;
+}
+
+li {
+    padding: .5rem 1rem .5rem 1rem !important;
+    text-align: left;
+    list-style: none;
+    background-color: #ffffff;
+}
+
+button {
+    margin-top: 1rem !important;
+    box-align: right !important;
+}
+
+.listened {
+    color: #c2c2c2;
+}

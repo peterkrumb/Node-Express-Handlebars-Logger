@@ -1,10 +1,40 @@
  <h1 class="text-center">Playlist!</h1>
-    <img src="./images/877519_media_512x512.png" alt="logo" class="center">
+    <img src="https://www.shareicon.net/data/128x128/2017/02/01/877519_media_512x512.png" alt="logo" class="center">
 
-    <h2>Add a Song</h2>
-    <form class="create-form">
+<div class="row">
+    <div class="col-6 new">
+      <ol>
+        {{#each song}}
+        {{#unless listened}}
+        {{> songs/listened-block listened=false}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
 
+    <div class="col-6 listened">
+      <ol>
+        {{#each song}}
+        {{#if listened}}
+        {{> songs/listened-block listened=true}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 input">
+      <form class="create-form">
         <div class="form-group">
-            <label for="ca">Song Name:</label>
-            <input type="text" id="ca" name="name">
+          <input class="submit-song" id="ipod" name="choice" maxlength="50" type="text">
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+      </form>
+      <p>Add a Song</p>
+    </div>
+  </div>
+</div>
+
+
+    
