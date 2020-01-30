@@ -2,28 +2,27 @@
     <img src="https://www.shareicon.net/data/128x128/2017/02/01/877519_media_512x512.png" alt="logo" class="center">
 
 <div class="row">
-    <div class="col-6 new">
-      <ol>
-        {{#each song}}
+    <div class="col-md-6 new">
+      <ul>
+        {{#each songs}}
         {{#unless listened}}
-        {{> songs/listened-block listened=false}}
+        {{> song/song-block listened=false}}
         {{/unless}}
         {{/each}}
-      </ol>
+      </ul>
     </div>
 
-    <div class="col-6 listened">
+    <div class="col-md-6 listened">
       <ol>
-        {{#each song}}
+        {{#each songs}}
         {{#if listened}}
-        {{> songs/listened-block listened=true}}
+        {{> song/listened-block listened=true}}
         {{/if}}
         {{/each}}
       </ol>
     </div>
   </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-10 input">
+<p>Add a Song</p>
       <form class="create-form">
         <div class="form-group">
           <input class="submit-song" id="ipod" name="choice" maxlength="50" type="text">
@@ -31,9 +30,7 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
-      <p>Add a Song</p>
-    </div>
-  </div>
+     
 </div>
 
 

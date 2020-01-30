@@ -1,7 +1,7 @@
 $(function() {
     $(".change-state").on("click", function(event) {
         var id = $(this).data("id");
-        var newListened = $(this).data("newSong");
+        var newListened = $(this).data("listened");
 
         var newListenedState = {
             listened: true
